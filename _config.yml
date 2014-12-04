@@ -1,16 +1,371 @@
-# Site settings
-title: Clean Blog
-email: your-email@yourdomain.com
-description: "Write your site description here. It will be used as your sites meta description as well!"
-baseurl: "/startbootstrap-clean-blog-jekyll"
-url: "http://yourdomain.com"
-twitter_username: SBootstrap
-github_username:  davidtmiller
-facebook_username:  IronSummitMedia
+# -----------------------------------------------------------------------------
+# THE ONLY WARNING!!!
+# -----------------------------------------------------------------------------
 
-# Build settings
-markdown: kramdown
-highlighter: pygments
-permalink: pretty
+# Do not use tabs in this configuration file! Only SPACES!!!
+# This will either lead to parsing errors, or Jekyll will revert to the default settings. Use spaces instead.
+# ! Read more: http://jekyllrb.com/docs/configuration/
+
+# Use this YAML Lint tool to help: http://yamllint.com/
+# YAML PARSER http://yaml-online-parser.appspot.com/
+
+# -----------------------------------------------------------------------------
+# YAML resources
+# -----------------------------------------------------------------------------
+
+# http://nodeca.github.io/js-yaml/
+# http://yaml-online-parser.appspot.com/
+# http://www.yamllint.com/
+
+# -----------------------------------------------------------------------------
+# LIQUID resources
+# -----------------------------------------------------------------------------
+
+# http://docs.shopify.com/themes/liquid-documentation/basics
+# https://mobilecommons.zendesk.com/hc/en-us/articles/202052544-Liquid-templates
+
+
+# -----------------------------------------------------------------------------
+# SITE PERSONALIZATION
+# -----------------------------------------------------------------------------
+
+name: EBR Renovations
+# This text will be used on the homepage to personalize the name of your site
+# This will also act as a text link that always points to the homepage
+
+tagline: Apex Renovators
+# This will show up in the header next to the site logo
+#Job training for young creatives
+
+
+# -----------------------------------------------------------------------------
+# GOOGLE ANALYTICS
+# -----------------------------------------------------------------------------
+
+google_analytics:
+# This will enable Google Analytics to track your site
+
+
+# -----------------------------------------------------------------------------
+# POST Settings
+# -----------------------------------------------------------------------------
+
+#future: false
+# This will hide future dated posts from your live blog.
+
+# show_drafts: false
+
+# -----------------------------------------------------------------------------
+# PAGINATION (not working right now)
+# -----------------------------------------------------------------------------
+
 paginate: 5
-exclude: ["node_modules"]
+#paginate_path: "/blog/page:num"
+# Use pagination on the blog page to better manage posts
+
+
+# -----------------------------------------------------------------------------
+# COMMENTS
+# -----------------------------------------------------------------------------
+
+disqus:
+# To enable comments, use your Disqus "shortname" to enable comments
+# You can create a free acount here: https://disqus.com/
+
+
+# -----------------------------------------------------------------------------
+# SITE CONFIGURATION
+# -----------------------------------------------------------------------------
+
+url: http://ebrstl.com
+# http://repoName.github.io
+# http://www.yourDomainName.com
+# This will confiure your sitemap.xml and RSS feed
+
+baseurl: ""
+# use this configuraiton for a "Username" or "Organization" site
+# ex: http://userName.github.io
+
+# else
+
+# baseurl: "/repoName"
+# use this configuraiton for a "Project" site:
+# ex: http://userName.github.io/REPO-NAME
+
+# ! Ream more: http://blog.parkermoore.de/2014/04/27/clearing-up-confusion-around-baseurl/
+
+
+timezone: America/Chicago
+# Set the timezone. ! Read more: http://jekyllrb.com/docs/configuration/
+
+
+# -----------------------------------------------------------------------------
+# SITE VARIABLES
+# -----------------------------------------------------------------------------
+
+# This is a list of variables (Front Matter) to be throughout the site.
+# ! Read more: http://jekyllrb.com/docs/frontmatter/
+
+social-media:
+    email: frank@ebrstl.com
+    facebook: stlartworks
+    flickr:
+    instagram: stlartworks
+    linkedin:
+    rss: # just type anything here for a working RSS icon, make sure you set the "url" above!
+    twitter: stlartworks
+    youtube:
+    vimeo:
+
+# -----------------------------------------------------------------------------
+# COLLECTIONS
+# -----------------------------------------------------------------------------
+
+#  team_members:
+#    output: true
+#    permalink: /team-members/:path/
+
+# Not everything is a post or a page. Maybe you want to document the various methods in your open source project, members of a team, or talks at a conference. Collections allow you to define a new type of document that behave like Pages or Posts do normally, but also have their own unique properties and namespace.
+
+# Read more: http://jekyllrb.com/docs/collections/
+# Read more: http://www.sitepoint.com/getting-started-jekyll-collections/
+
+collections:
+    team:
+        output: true
+
+
+# -----------------------------------------------------------------------------
+# DEFAULT FRONT MATTER SETTINGS
+# -----------------------------------------------------------------------------
+
+# Using YAML Front Matter is one way that you can specify configuration in the pages and posts for your site.
+
+# ! Read more: http://jekyllrb.com/docs/configuration/
+
+# Just setting default layouts for several collections( or post-types in WP lingo)
+
+defaults:
+    -
+        scope:
+            path: ""
+            type: "posts"
+        values:
+            layout: "post"
+    -
+        scope:
+            path: ""
+            type: "staff"
+        values:
+            layout: "staff"
+
+
+
+# -----------------------------------------------------------------------------
+# PROSE SETTINGS
+# -----------------------------------------------------------------------------
+
+siteurl: "http://ebrstl.com"
+# Turns on Jekyll live previews. The url is the homepage of the live site.
+
+#relativeLinks: "http://prose.github.io/starter/links.jsonp"
+#rooturl: _posts
+
+# PROSE allows you to manage .md files
+# ! Read more: https://github.com/prose/prose/wiki/Prose-Configuration
+
+prose:
+    media: images
+    ignore:
+      - index.md
+      - _config.yml
+      - /_layouts
+      - /_includes
+      - /_scss
+
+    metadata:
+
+        _board:
+            -
+                name: "layout"
+                field:
+                    element: "hidden"
+                    label: "layout"
+                    value: "board"
+            -
+                name: "title"
+                field:
+                    element: "text"
+                    label: "Title"
+                    value: ""
+            -
+                name: "start-year"
+                field:
+                    element: "number"
+                    label: "Start year"
+                    value: ""
+            -
+                name: "board-title"
+                field:
+                    element: "text"
+                    label: "Board Title"
+                    value: ""
+            -
+                name: "employer"
+                field:
+                    element: "text"
+                    label: "Employer"
+                    value: ""
+            -
+                name: "job-title"
+                field:
+                    element: "text"
+                    label: "Job title"
+                    value: ""
+            -
+                name: "member-img"
+                field:
+                    element: "text"
+                    label: "Member's image"
+                    value: ""
+            -
+                name: "facebook"
+                field:
+                    element: "text"
+                    label: "Facebook"
+                    value: ""
+            -
+                name: "twitter"
+                field:
+                    element: "text"
+                    label: "Twitter"
+                    value: ""
+            -
+                name: "instagram"
+                field:
+                    element: "text"
+                    label: "Instagram"
+                    value: ""
+            -
+                name: "website"
+                field:
+                    element: "text"
+                    label: "Website"
+                    value: ""
+        _programs:
+            -
+                name: "layout"
+                field:
+                    element: "hidden"
+                    label: "layout"
+                    value: "programs"
+            -
+                name: season
+                field:
+                    element: select
+                    label: "Season"
+                    options:
+                        -
+                            name: Fall
+                            value: fall
+                        -
+                            name: Spring
+                            value: spring
+                        -
+                            name: Summer
+                            value: summer
+                    placeholder: "Choose season"
+
+
+# -----------------------------------------------------------------------------
+# Sass SETTINGS
+# -----------------------------------------------------------------------------
+
+sass:
+  sass_dir: _scss
+  # The load path for Sass imports. This folder must only contain imports!
+  # Read more: http://jekyllrb.com/docs/assets/
+
+  style: :expanded
+    # Sass output settings. ! Read more:
+    # http://web-design-weekly.com/2014/06/15/different-sass-output-styles/
+
+    # optoins:
+      #:nested
+      #:expanded
+      #:compact
+      #:compressed #minified
+
+
+# -----------------------------------------------------------------------------
+# SAFE PLUGINS allowed by gitHub pages
+# -----------------------------------------------------------------------------
+
+gems:
+# Plugin list
+  - jemoji # Emoji please!
+  - jekyll-sitemap # Create a sitemap using the official Jekyll sitemap gem
+  # - jekyll-mentions
+  - jekyll-redirect-from
+
+
+# -----------------------------------------------------------------------------
+# PERMALINK SETTINGS
+# -----------------------------------------------------------------------------
+
+permalink: /:title/
+# These may only apply to posts, not to pages, collections or static files.
+# ! Read more: http://jekyllrb.com/docs/permalinks/
+
+# permalink: pretty
+
+# -----------------------------------------------------------------------------
+# CONVERSION SETTINGS
+# -----------------------------------------------------------------------------
+
+highlighter: pygments
+# Pygments is a generic syntax highlighter for general use in all kinds of software such as forum systems, wikis or other applications that need to prettify source code.
+
+# Read more: http://pygments.org/
+
+markdown: kramdown
+# kramdown (sic, not Kramdown or KramDown, just kramdown) is a free MIT-licensed Ruby library for parsing and converting a superset of Markdown.
+
+# Read more: http://kramdown.gettalong.org/
+
+
+# -----------------------------------------------------------------------------
+# SAFE MODE
+# -----------------------------------------------------------------------------
+
+safe: true
+# Use "true" if you intend to let gitHub automatically build your pages
+
+# GitHub Pages is powered by Jekyll, however all Pages sites are generated using the --safe option to disable custom plugins for security reasons. Unfortunately, this means your plugins won’t work if you’re deploying to GitHub Pages.
+
+#You can still use GitHub Pages to publish your site, but you’ll need to convert the site locally and push the generated static files to your GitHub repository instead of the Jekyll source files.
+
+# ! Read more: http://jekyllrb.com/docs/plugins/
+
+
+# -----------------------------------------------------------------------------
+# Serving
+# -----------------------------------------------------------------------------
+
+# port:    4000
+# Change port if you are working on multiple Jekyll sites at once
+
+# -----------------------------------------------------------------------------
+# PRODUCITON BUILD SETTINGS
+# -----------------------------------------------------------------------------
+
+exclude:
+# Exclude (ignore) these files in your Producion build
+
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md
+
+
+# Check GitHub Dependency Verison: https://pages.github.com/versions/
