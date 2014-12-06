@@ -51,10 +51,11 @@ hr.small {
 }
 .navbar-custom .navbar-brand {
   font-weight: 800;
+  font-size: 2.5em;
 }
 .navbar-custom .nav li a {
   text-transform: uppercase;
-  font-size: 12px;
+  font-size: 1.5em;
   font-weight: 800;
   letter-spacing: 1px;
 }
@@ -394,4 +395,12 @@ img::-moz-selection {
 }
 body {
   webkit-tap-highlight-color: #0085a1;
+}
+
+.logo-full, .logo-square {
+    width: 100%;
+}
+
+.logo-full-fill, .logo-square-fill {
+  fill: #000;
 }
